@@ -238,9 +238,37 @@ a:visited{
     font-weight: bold;
     margin-bottom: .5rem;
 }
-a:active{
+img {
+    max-width: 100%;
 }
-
+@media screen and (max-width: 800px) {
+    .left-container,
+    .trending-cont,
+    .announcements-cont{
+        display: none;
+    }
+    .main-container{
+        grid-row: 2/3;
+        grid-column: 1/4;
+    }
+    .top-container{
+        grid-column: 1/5;
+    }
+    .main-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        padding: 2rem;
+        gap: 2rem;
+    }
+    .card-item{
+        padding: 2rem;
+        padding-bottom: 1rem;
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: -7px 0 orange;
+    }
+}
 
 /* Imported from https://getcssscan.com/css-buttons-examples */
 .button-21 {
